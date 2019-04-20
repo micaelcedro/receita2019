@@ -10,7 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using receitas2019.Context;
+using receitas2019.Repositories;
+using receitas2019.Repositories.Interface;
+using Receitas2019.Core.Context;
 
 namespace receitas2019
 {
@@ -34,8 +36,9 @@ namespace receitas2019
             });
 
             //setando a classe de context e passando a conectionstring
-            services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Receitas2019.Web")));
+
+            services.AddTransient<IReceitaRepository, ReceitaRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

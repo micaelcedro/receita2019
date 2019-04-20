@@ -26,4 +26,7 @@ C:\Users\VINNY\source\repos\receitas2019\receitas2019\bin\Debug\netcoreapp2.2\re
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\bin\Debug\netcoreapp2.2\receitas2019.Views.pdb
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\receitas2019.Views.pdb
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\receitas2019.csproj.CopyComplete
-C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\receitas2019.csprojAssemblyReference.cache
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Receita\List.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Receitas2019.csprojAssemblyReference.cache
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\bin\Debug\netcoreapp2.2\Receitas2019.Core.dll
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\bin\Debug\netcoreapp2.2\Receitas2019.Core.pdb

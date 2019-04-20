@@ -11,7 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.RelatedAssemblyAttribute("receitas2019.Views")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.RelatedAssemblyAttribute("Receitas2019.Views")]
 [assembly: Microsoft.AspNetCore.Razor.Hosting.RazorLanguageVersionAttribute("2.1")]
 [assembly: Microsoft.AspNetCore.Razor.Hosting.RazorConfigurationNameAttribute("MVC-2.1")]
 [assembly: Microsoft.AspNetCore.Razor.Hosting.RazorExtensionAssemblyNameAttribute("MVC-2.1", "Microsoft.AspNetCore.Mvc.Razor.Extensions")]

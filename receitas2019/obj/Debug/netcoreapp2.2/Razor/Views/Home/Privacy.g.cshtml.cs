@@ -19,12 +19,17 @@ using receitas2019;
 #line default
 #line hidden
 #line 2 "C:\Users\VINNY\source\repos\receitas2019\receitas2019\Views\_ViewImports.cshtml"
-using receitas2019.Models;
+using Receitas2019.Core.Models;
+
+#line default
+#line hidden
+#line 3 "C:\Users\VINNY\source\repos\receitas2019\receitas2019\Views\_ViewImports.cshtml"
+using Receitas2019.Web.ViewModels;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"05ade6e9f29b8045e0708c54f87f2146a7e5d771", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0b95a676e58a2c5242be98fcaf1da9a0f8dbcb6a", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

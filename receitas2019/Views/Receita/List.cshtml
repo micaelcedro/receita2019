@@ -1,0 +1,20 @@
+﻿@model ReceitasListViewModel
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<div><h2>Todas as Receitas</h2></div><br />
+@foreach (var receita in Model.Receitas)
+{
+    <div class="col-sm-6 col-lg-6 col-md-6">
+        <div class="thumbnail">
+            <img src="@receita.Imagem" class="rounded" alt="" width="300" />
+        </div>
+        <div class="caption">
+            <h3>Receita de @receita.Nome</h3>
+            <h5>Tempo de Preparo: @receita.TempoDePreparo Minutos </h5>
+            <p><h5>Modo de Preparo: </h5><b></b> @receita.ModoDePreparo</p>
+        </div>
+    </div>
+}
