@@ -13,6 +13,8 @@ using Microsoft.Extensions.DependencyInjection;
 using receitas2019.Repositories;
 using receitas2019.Repositories.Interface;
 using Receitas2019.Core.Context;
+using Receitas2019.Web.Repositories;
+using Receitas2019.Web.Repositories.Interface;
 
 namespace receitas2019
 {
@@ -39,6 +41,7 @@ namespace receitas2019
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Receitas2019.Web")));
 
             services.AddTransient<IReceitaRepository, ReceitaRepository>();
+            services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -63,6 +66,11 @@ namespace receitas2019
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                   name: "categoriaFiltro",
+                   template: "Receita/{action}/{categoria?}",
+                   defaults: new { Controller = "Receita", action = "List" });
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

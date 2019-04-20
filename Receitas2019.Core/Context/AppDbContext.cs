@@ -16,5 +16,6 @@ namespace Receitas2019.Core.Context
         public DbSet<Ingrediente> Ingredientes { get; set; }
         public DbSet<Receita> Receitas { get; set; }
         public DbSet<IngredientesDaReceita> IngredientesDaReceitas { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
     }
 }

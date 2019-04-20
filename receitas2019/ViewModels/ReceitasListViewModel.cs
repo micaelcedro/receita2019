@@ -6,5 +6,7 @@ namespace Receitas2019.Web.ViewModels
     public class ReceitasListViewModel
     {
         public IEnumerable<Receita> Receitas { get; set; }
+
+        public string CategoriaAtual { get; set; }
     }
 }

@@ -31,6 +31,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        @await Component.InvokeAsync("CategoriaMenu")
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">Fale Conosco</a>
                         </li>

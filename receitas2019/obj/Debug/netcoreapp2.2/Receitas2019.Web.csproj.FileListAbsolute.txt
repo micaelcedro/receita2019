@@ -33,3 +33,14 @@ C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Ra
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ReceitaResumo.g.cshtml.cs
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Carrossel.g.cshtml.cs
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Contato\Index.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\CategoriaMenu\Default.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmReceitas\Create.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmReceitas\Delete.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmReceitas\Details.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmReceitas\Edit.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmReceitas\Index.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmCategorias\Create.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmCategorias\Delete.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmCategorias\Details.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmCategorias\Edit.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmCategorias\Index.g.cshtml.cs
