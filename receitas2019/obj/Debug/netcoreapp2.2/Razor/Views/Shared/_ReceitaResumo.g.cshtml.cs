@@ -29,7 +29,7 @@ using Receitas2019.Web.ViewModels;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da23a9448461a06c0ef3058ce8756ec555905993", @"/Views/Shared/_ReceitaResumo.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0b95a676e58a2c5242be98fcaf1da9a0f8dbcb6a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"300d95592233e18ad1703481b3244c2c488fbe85", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__ReceitaResumo : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Receita>
     {
         #pragma warning disable 1998

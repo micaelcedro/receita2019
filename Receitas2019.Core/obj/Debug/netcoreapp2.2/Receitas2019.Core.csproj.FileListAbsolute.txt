@@ -8,3 +8,4 @@ C:\Users\VINNY\source\repos\receitas2019\Receitas2019.Core\obj\Debug\netcoreapp2
 C:\Users\VINNY\source\repos\receitas2019\Receitas2019.Core\obj\Debug\netcoreapp2.2\Receitas2019.Core.pdb
 C:\Users\VINNY\source\repos\receitas2019\Receitas2019.Core\bin\Debug\netcoreapp2.2\Receitas2019.Core.runtimeconfig.json
 C:\Users\VINNY\source\repos\receitas2019\Receitas2019.Core\bin\Debug\netcoreapp2.2\Receitas2019.Core.runtimeconfig.dev.json
+C:\Users\VINNY\source\repos\receitas2019\Receitas2019.Core\obj\Debug\netcoreapp2.2\Receitas2019.Core.csprojAssemblyReference.cache

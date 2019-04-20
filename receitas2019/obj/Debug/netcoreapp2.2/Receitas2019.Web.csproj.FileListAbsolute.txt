@@ -32,3 +32,4 @@ C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Re
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Receita\List.g.cshtml.cs
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ReceitaResumo.g.cshtml.cs
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Carrossel.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Contato\Index.g.cshtml.cs
