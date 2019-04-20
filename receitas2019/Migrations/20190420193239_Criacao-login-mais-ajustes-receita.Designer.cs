@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Receitas2019.Core.Context;
 
 namespace Receitas2019.Web.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190420193239_Criacao-login-mais-ajustes-receita")]
+    partial class Criacaologinmaisajustesreceita
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -195,6 +197,42 @@ namespace Receitas2019.Web.Migrations
                     b.ToTable("Categoria");
                 });
 
+            modelBuilder.Entity("Receitas2019.Core.Models.Ingrediente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ingredientes");
+                });
+
+            modelBuilder.Entity("Receitas2019.Core.Models.IngredientesDaReceita", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("IngredienteId");
+
+                    b.Property<float>("Quantidade");
+
+                    b.Property<int?>("ReceitaId");
+
+                    b.Property<int>("UnidadeDeMedida");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IngredienteId");
+
+                    b.HasIndex("ReceitaId");
+
+                    b.ToTable("IngredientesDaReceitas");
+                });
+
             modelBuilder.Entity("Receitas2019.Core.Models.Receita", b =>
                 {
                     b.Property<int>("Id")
@@ -211,7 +249,7 @@ namespace Receitas2019.Web.Migrations
 
                     b.Property<string>("Nome");
 
-                    b.Property<string>("TempoDePreparo");
+                    b.Property<float>("TempoDePreparo");
 
                     b.HasKey("Id");
 
@@ -276,6 +314,17 @@ namespace Receitas2019.Web.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Receitas2019.Core.Models.IngredientesDaReceita", b =>
+                {
+                    b.HasOne("Receitas2019.Core.Models.Ingrediente", "Ingrediente")
+                        .WithMany()
+                        .HasForeignKey("IngredienteId");
+
+                    b.HasOne("Receitas2019.Core.Models.Receita", "Receita")
+                        .WithMany()
+                        .HasForeignKey("ReceitaId");
                 });
 
             modelBuilder.Entity("Receitas2019.Core.Models.Receita", b =>

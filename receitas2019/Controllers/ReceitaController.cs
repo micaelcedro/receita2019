@@ -31,12 +31,14 @@ namespace receitas2019.Controllers
             }
             else
             {
-                if (string.Equals("Doce", _categoria, StringComparison.OrdinalIgnoreCase))
-                    receitas = _receitaRepository.Receitas.Where(r => r.categoria.Id.Equals(1)).OrderBy(r => r.Nome);
-                else
-                    receitas = _receitaRepository.Receitas.Where(r => r.categoria.Id.Equals(2)).OrderBy(r => r.Nome);
+                receitas = _receitaRepository.Receitas.Where(r => r.CategoriaId.Equals(categoria)).OrderBy(r => r.Nome);
 
-                categoriaAtual = _categoria;
+                if (string.Equals("Doce", _categoria, StringComparison.OrdinalIgnoreCase))
+                    receitas = _receitaRepository.Receitas.Where(r => r.CategoriaId.Equals(1)).OrderBy(r => r.Nome);
+                else
+                    receitas = _receitaRepository.Receitas.Where(r => r.CategoriaId.Equals(2)).OrderBy(r => r.Nome);
+
+                categoriaAtual = categoria;
             }
 
             var receitasListViewModel = new ReceitasListViewModel

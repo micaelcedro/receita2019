@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Receitas2019.Core.Context;
 
 namespace Receitas2019.Web.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190420195155_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -186,9 +188,11 @@ namespace Receitas2019.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Descricao");
+                    b.Property<string>("Descricao")
+                        .HasMaxLength(300);
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
 
@@ -201,7 +205,8 @@ namespace Receitas2019.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoriaId");
+                    b.Property<int>("CategoriaId")
+                        .HasMaxLength(100);
 
                     b.Property<string>("Imagem");
 
@@ -209,9 +214,11 @@ namespace Receitas2019.Web.Migrations
 
                     b.Property<string>("ModoDePreparo");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .HasMaxLength(200);
 
-                    b.Property<string>("TempoDePreparo");
+                    b.Property<string>("TempoDePreparo")
+                        .HasMaxLength(20);
 
                     b.HasKey("Id");
 

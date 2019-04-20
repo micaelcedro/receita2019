@@ -115,36 +115,7 @@ namespace Receitas2019.Web.Controllers
             }
             return View(categoria);
         }
-
-        // GET: AdmCategorias/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var categoria = await _context.Categoria
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (categoria == null)
-            {
-                return NotFound();
-            }
-
-            return View(categoria);
-        }
-
-        // POST: AdmCategorias/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var categoria = await _context.Categoria.FindAsync(id);
-            _context.Categoria.Remove(categoria);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
+        
         private bool CategoriaExists(int id)
         {
             return _context.Categoria.Any(e => e.Id == id);

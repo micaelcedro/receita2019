@@ -35,6 +35,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">Fale Conosco</a>
                         </li>
+                        <li class="dropdown">
+                            <a class="nav-link text-dark" asp-controller="AdmReceitas" asp-action="Index" data-toggle="dropdown">
+                                Administração<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="nav-link text-dark" asp-controller="AdmReceitas" asp-action="Index">Receitas</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

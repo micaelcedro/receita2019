@@ -19,42 +19,26 @@ namespace Receitas2019.Web.Controllers
             _context = context;
         }
 
-        // GET: AdmReceitas
+        // GET: AdministracaoReceitas
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Receitas.ToListAsync());
+            var appDbContext = _context.Receitas.Include(r => r.Categoria);
+            return View(await appDbContext.ToListAsync());
         }
 
-        // GET: AdmReceitas/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var receita = await _context.Receitas
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (receita == null)
-            {
-                return NotFound();
-            }
-
-            return View(receita);
-        }
-
-        // GET: AdmReceitas/Create
+        // GET: AdministracaoReceitas/Create
         public IActionResult Create()
         {
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "Id");
             return View();
         }
 
-        // POST: AdmReceitas/Create
+        // POST: AdministracaoReceitas/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,ModoDePreparo,TempoDePreparo,Imagem")] Receita receita)
+        public async Task<IActionResult> Create([Bind("Id,Nome,ModoDePreparo,Ingredientes,TempoDePreparo,Imagem,CategoriaId")] Receita receita)
         {
             if (ModelState.IsValid)
             {
@@ -62,10 +46,11 @@ namespace Receitas2019.Web.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "Id", receita.CategoriaId);
             return View(receita);
         }
 
-        // GET: AdmReceitas/Edit/5
+        // GET: AdministracaoReceitas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -78,15 +63,16 @@ namespace Receitas2019.Web.Controllers
             {
                 return NotFound();
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "Id", receita.CategoriaId);
             return View(receita);
         }
 
-        // POST: AdmReceitas/Edit/5
+        // POST: AdministracaoReceitas/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,ModoDePreparo,TempoDePreparo,Imagem")] Receita receita)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,ModoDePreparo,Ingredientes,TempoDePreparo,Imagem,CategoriaId")] Receita receita)
         {
             if (id != receita.Id)
             {
@@ -113,10 +99,11 @@ namespace Receitas2019.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "Id", receita.CategoriaId);
             return View(receita);
         }
 
-        // GET: AdmReceitas/Delete/5
+        // GET: AdministracaoReceitas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,6 +112,7 @@ namespace Receitas2019.Web.Controllers
             }
 
             var receita = await _context.Receitas
+                .Include(r => r.Categoria)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (receita == null)
             {
@@ -134,7 +122,7 @@ namespace Receitas2019.Web.Controllers
             return View(receita);
         }
 
-        // POST: AdmReceitas/Delete/5
+        // POST: AdministracaoReceitas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

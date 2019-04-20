@@ -12,10 +12,11 @@ namespace Receitas2019.Core.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Nome { get; set; }
-        public IEnumerable<IngredientesDaReceita> Ingredientes { get; set; }
         public string ModoDePreparo { get; set; }
-        public float TempoDePreparo { get; set; }
+        public string Ingredientes { get; set; }
+        public string TempoDePreparo { get; set; }
         public string Imagem { get; set; }
-        public Categoria categoria { get; set; }
+        public int CategoriaId { get; set; }
+        public virtual Categoria Categoria { get; set; }
     }
 }

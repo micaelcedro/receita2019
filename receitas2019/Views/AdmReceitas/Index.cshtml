@@ -25,6 +25,9 @@
                 Tempo
             </th>
             <th>
+                Categoria
+            </th>
+            <th>
                 Imagem
             </th>
             <th></th>
@@ -37,13 +40,16 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                <textarea cols=50 id="ingredientes" rows="10" name="ingredientes" style="resize:none; border:hidden; background-color:transparent"  disabled="disabled">@item.ModoDePreparo</textarea>
+                <textarea cols=50 id="ingredientes" rows="10" name="ingredientes" style="resize:none; border:hidden; background-color:transparent" disabled="disabled">@item.Ingredientes</textarea>
             </td>
             <td>
                 <textarea cols=50 id="mododepreparo" rows="10" name="mododepreparo" style="resize:none; border:hidden; background-color:transparent" disabled="disabled">@item.ModoDePreparo</textarea>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TempoDePreparo) Min
+                @Html.DisplayFor(modelItem => item.TempoDePreparo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria.Nome)
             </td>
             <td>
                 <img src="@Html.DisplayFor(modelItem => item.Imagem)" class="rounded" alt="" width="300" />

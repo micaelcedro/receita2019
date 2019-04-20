@@ -1,4 +1,4 @@
-﻿@model Receitas2019.Core.Models.Receita
+﻿@model Receita
 
 @{
     ViewData["Title"] = "Edit";
@@ -15,23 +15,32 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
+                <input required asp-for="Nome" class="form-control" />
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Ingredientes" class="control-label">Ingredientes</label>
+                <textarea required placeholder='Digite os ingredientes necessários' cols="200" rows="10" asp-for="Ingredientes" class="control-label"></textarea>
+                <span asp-validation-for="Ingredientes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="ModoDePreparo" class="control-label">Modo de Preparo</label>
-                <textarea placeholder='Auto-Expanding Textarea' cols="200" rows="10" asp-for="ModoDePreparo" class="control-label"></textarea>
+                <textarea required placeholder='Digite o passo a passo da receita' cols="200" rows="10" asp-for="ModoDePreparo" class="control-label"></textarea>
                 <span asp-validation-for="ModoDePreparo" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TempoDePreparo" class="control-label">Tempo de Preparo</label>
-                <input asp-for="TempoDePreparo" class="form-control" />
+                <input required type="time" asp-for="TempoDePreparo" class="form-control" />
                 <span asp-validation-for="TempoDePreparo" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Imagem" class="control-label">Link da Imagem</label>
-                <input asp-for="Imagem" class="form-control" />
+                <input required type="url" asp-for="Imagem" class="form-control" />
                 <span asp-validation-for="Imagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoriaId" class="control-label">Categoria</label>
+                <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-primary" />
