@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Receitas2019.Core.Models.Receita>
+﻿@model IEnumerable<Receita>
 
 @{
     ViewData["Title"] = "Gerenciar Item";
 }
 
-<h1>Index</h1>
+<h1>Área de Gerenciamento</h1>
 
 <p>
     <a asp-action="Create">Criar novo</a>
@@ -13,16 +13,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                Receita
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ModoDePreparo)
+                Ingredientes
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TempoDePreparo)
+                Modo de Preparo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Imagem)
+                Tempo
+            </th>
+            <th>
+                Imagem
             </th>
             <th></th>
         </tr>
@@ -34,17 +37,19 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                <textarea cols=60 id="opiniao" rows="10" name="opiniao" maxlength="500" wrap="hard">@item.ModoDePreparo</textarea>
+                <textarea cols=50 id="ingredientes" rows="10" name="ingredientes" style="resize:none; border:hidden; background-color:transparent"  disabled="disabled">@item.ModoDePreparo</textarea>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TempoDePreparo)
+                <textarea cols=50 id="mododepreparo" rows="10" name="mododepreparo" style="resize:none; border:hidden; background-color:transparent" disabled="disabled">@item.ModoDePreparo</textarea>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Imagem)
+                @Html.DisplayFor(modelItem => item.TempoDePreparo) Min
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.Imagem)" class="rounded" alt="" width="300" />
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
             </td>
         </tr>

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Área de Edição</h1>
 
 <h4>Receita</h4>
 <hr />
@@ -19,28 +19,28 @@
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <textarea cols="100" asp-for="ModoDePreparo" class="control-label"></textarea>
-                <input asp-for="ModoDePreparo" class="form-control" />
+                <label asp-for="ModoDePreparo" class="control-label">Modo de Preparo</label>
+                <textarea placeholder='Auto-Expanding Textarea' cols="200" rows="10" asp-for="ModoDePreparo" class="control-label"></textarea>
                 <span asp-validation-for="ModoDePreparo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TempoDePreparo" class="control-label"></label>
+                <label asp-for="TempoDePreparo" class="control-label">Tempo de Preparo</label>
                 <input asp-for="TempoDePreparo" class="form-control" />
                 <span asp-validation-for="TempoDePreparo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Imagem" class="control-label"></label>
+                <label asp-for="Imagem" class="control-label">Link da Imagem</label>
                 <input asp-for="Imagem" class="form-control" />
                 <span asp-validation-for="Imagem" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar para Área de Gerenciamento</a>
 </div>
 
