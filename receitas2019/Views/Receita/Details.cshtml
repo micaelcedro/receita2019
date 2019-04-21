@@ -1,0 +1,32 @@
+﻿@model Receita
+
+<div class="container marginTop">
+    <div class="row">
+        <div class="card">
+            <div class="text-center view overlay hm-white-slight">
+                <img src="@Model.Imagem" class="img-fluid" alt="">
+                <a href="#">
+                    <div class="mask waves-effect waves-light"></div>
+                </a>
+            </div>
+            <div>
+                <!--Title-->
+                <h2 class="card-title">@Model.Nome</h2><br />
+                <!--Text-->
+                <h5><img width="30" height="30" src="~/images/relogio.png"> @Model.TempoDePreparo </h5>
+
+                <p><h5>Ingredientes: </h5><b></b><textarea cols=100 id="ingredientes" rows="10" style="resize:none; border:hidden; background-color:aliceblue" disabled="disabled">@Model.Ingredientes</textarea></p>
+                <p><h5>Modo de Preparo: </h5><b></b><textarea cols=100 id="mododepreparo" rows="10" style="resize:none; border:hidden; background-color:aliceblue" disabled="disabled">@Model.ModoDePreparo</textarea></p>
+
+                <p>
+                    <h4 class="card-title">@Model.Tag</h4>
+                </p>
+
+                <p>
+                    <a asp-controller="Receita" asp-action="List" class="btn btn-default"><h2>Ver todas as receitas</h2></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

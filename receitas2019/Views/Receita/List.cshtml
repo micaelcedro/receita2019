@@ -5,7 +5,7 @@
 }
 
 <div><h2>Receitas</h2></div><br />
-@foreach (var receita in Model.Receitas)
+@foreach (Receita receita in Model.Receitas)
 {
     @Html.Partial("_ReceitaResumo", receita);
 }

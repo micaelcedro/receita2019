@@ -49,6 +49,15 @@ namespace receitas2019.Controllers
 
             return View(receitasListViewModel);
         }
+        public ViewResult Details(int receitaId)
+        {
+            var receita = _receitaRepository.Receitas.FirstOrDefault(r => r.Id == receitaId);
+            if (receita == null)
+            {
+                return View("~/Views/Error/Error.cshtml");
+            }
+            return View(receita);
+        }
 
         public ViewResult Search(string searchString)
         {

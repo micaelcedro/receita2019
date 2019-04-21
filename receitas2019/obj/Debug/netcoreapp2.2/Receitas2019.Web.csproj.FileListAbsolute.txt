@@ -96,3 +96,5 @@ C:\Users\alexv\Source\Repos\receita2019\receitas2019\obj\Debug\netcoreapp2.2\Rec
 C:\Users\alexv\Source\Repos\receita2019\receitas2019\obj\Debug\netcoreapp2.2\Receitas2019.Web.csproj.CopyComplete
 C:\Users\alexv\Source\Repos\receita2019\receitas2019\obj\Debug\netcoreapp2.2\Receitas2019.Web.dll
 C:\Users\alexv\Source\Repos\receita2019\receitas2019\obj\Debug\netcoreapp2.2\Receitas2019.Web.pdb
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Receita\Details.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Error\Error.g.cshtml.cs
