@@ -1,0 +1,17 @@
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\bin\Debug\netcoreapp2.2\Receitas2019.API.deps.json
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\bin\Debug\netcoreapp2.2\Receitas2019.API.runtimeconfig.json
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\bin\Debug\netcoreapp2.2\Receitas2019.API.runtimeconfig.dev.json
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\bin\Debug\netcoreapp2.2\Receitas2019.API.dll
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\bin\Debug\netcoreapp2.2\Receitas2019.API.pdb
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\bin\Debug\netcoreapp2.2\Receitas2019.Core.dll
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\bin\Debug\netcoreapp2.2\Receitas2019.Core.pdb
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.csprojAssemblyReference.cache
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.csproj.CoreCompileInputs.cache
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.RazorAssemblyInfo.cache
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.RazorAssemblyInfo.cs
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.AssemblyInfoInputs.cache
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.AssemblyInfo.cs
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.RazorTargetAssemblyInfo.cache
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.csproj.CopyComplete
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.dll
+C:\Users\alexv\Source\Repos\receita2019\Receitas2019.API\obj\Debug\netcoreapp2.2\Receitas2019.API.pdb
