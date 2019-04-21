@@ -28,3 +28,4 @@ C:\Users\alexv\Source\Repos\receita2019\Receitas2019.Core\obj\Debug\netcoreapp2.
 C:\Users\alexv\Source\Repos\receita2019\Receitas2019.Core\obj\Debug\netcoreapp2.2\Receitas2019.Core.csproj.CopyComplete
 C:\Users\alexv\Source\Repos\receita2019\Receitas2019.Core\obj\Debug\netcoreapp2.2\Receitas2019.Core.dll
 C:\Users\alexv\Source\Repos\receita2019\Receitas2019.Core\obj\Debug\netcoreapp2.2\Receitas2019.Core.pdb
+C:\Users\VINNY\source\repos\receitas2019\Receitas2019.Core\obj\Debug\netcoreapp2.2\Receitas2019.Core.csprojAssemblyReference.cache

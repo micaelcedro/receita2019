@@ -62,7 +62,7 @@ namespace receitas2019.Controllers
             }
             else
             {
-                receitas = _receitaRepository.Receitas.Where(p => p.Nome.ToLower().Contains(_searchString.ToLower()));
+                receitas = _receitaRepository.Receitas.Where(p => p.Tag.ToLower().Contains(_searchString.ToLower()));
             }
 
             return View("~/Views/Receita/List.cshtml", new ReceitasListViewModel { Receitas = receitas, CategoriaAtual = "Todos as receitas" });

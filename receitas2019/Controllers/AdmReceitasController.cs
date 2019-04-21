@@ -40,7 +40,7 @@ namespace Receitas2019.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,ModoDePreparo,Ingredientes,TempoDePreparo,Imagem,CategoriaId")] Receita receita)
+        public async Task<IActionResult> Create([Bind("Id,Nome,ModoDePreparo,Ingredientes,TempoDePreparo,Imagem,CategoriaId,Tag")] Receita receita)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +74,7 @@ namespace Receitas2019.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,ModoDePreparo,Ingredientes,TempoDePreparo,Imagem,CategoriaId")] Receita receita)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,ModoDePreparo,Ingredientes,TempoDePreparo,Imagem,CategoriaId,Tag")] Receita receita)
         {
             if (id != receita.Id)
             {

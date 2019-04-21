@@ -47,13 +47,13 @@
                     </ul>
                 </div>
                 @await Html.PartialAsync("_LoginPartial")
+                
                 <form class="navbar-form navbar-right text-white" asp-controller="Receita" asp-action="Search" method="get">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Procurar Receitas" name="searchString" value="@ViewData["searchString"]">
                     </div>
                 </form>
             </div>
-
         </nav>
     </header>
     <div class="container">

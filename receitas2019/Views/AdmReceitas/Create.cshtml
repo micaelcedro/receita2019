@@ -42,6 +42,11 @@
                 <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
             </div>
             <div class="form-group">
+                <label asp-for="Tag" class="control-label">Tags de busca</label>
+                <textarea required placeholder='Digite as tag para a busca... Exemplo #Chocolate #Bolo' cols="200" rows="10" asp-for="Tag" class="control-label"></textarea>
+                <span asp-validation-for="Tag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Criar" class="btn btn-primary" />
             </div>
         </form>
