@@ -13,41 +13,47 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm bg-dark text-white">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Receita Manera</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">Receita Manera</a>
+                <div class="navbar navbar-expand-sm">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         @await Component.InvokeAsync("CategoriaMenu")
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">Fale Conosco</a>
+                            <a class="nav-link text-white" asp-controller="Contato" asp-action="Index">Fale Conosco</a>
                         </li>
-                        <li class="dropdown">
-                            <a class="nav-link text-dark" asp-controller="AdmReceitas" asp-action="Index" data-toggle="dropdown">
-                                Administração<b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="nav-link text-dark" asp-controller="AdmReceitas" asp-action="Index">Receitas</a>
-                                </li>
-                            </ul>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="dropdown">
+                                <a class="nav-link text-white" asp-controller="AdmReceitas" asp-action="Index" data-toggle="dropdown">
+                                    Administração<b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="nav-link text-dark" asp-controller="AdmReceitas" asp-action="Index">Receitas</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
                     </ul>
                 </div>
+                @await Html.PartialAsync("_LoginPartial")
+                <form class="navbar-form navbar-right text-white" asp-controller="Receita" asp-action="Search" method="get">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Procurar Receitas" name="searchString" value="@ViewData["searchString"]">
+                    </div>
+                </form>
             </div>
+
         </nav>
     </header>
     <div class="container">

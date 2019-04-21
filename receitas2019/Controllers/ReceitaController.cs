@@ -49,5 +49,23 @@ namespace receitas2019.Controllers
 
             return View(receitasListViewModel);
         }
+
+        public ViewResult Search(string searchString)
+        {
+            string _searchString = searchString;
+            IEnumerable<Receita> receitas;
+            string currentCategory = string.Empty;
+
+            if (string.IsNullOrEmpty(_searchString))
+            {
+                receitas = _receitaRepository.Receitas.OrderBy(r => r.Id);
+            }
+            else
+            {
+                receitas = _receitaRepository.Receitas.Where(p => p.Nome.ToLower().Contains(_searchString.ToLower()));
+            }
+
+            return View("~/Views/Receita/List.cshtml", new ReceitasListViewModel { Receitas = receitas, CategoriaAtual = "Todos as receitas" });
+        }
     }
 }

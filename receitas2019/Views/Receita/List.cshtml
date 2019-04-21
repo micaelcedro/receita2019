@@ -4,7 +4,7 @@
     ViewData["Title"] = "List";
 }
 
-<div><h2>Todas as Receitas</h2></div><br />
+<div><h2>Receitas</h2></div><br />
 @foreach (var receita in Model.Receitas)
 {
     @Html.Partial("_ReceitaResumo", receita);

@@ -42,3 +42,8 @@ C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Ra
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmCategorias\Details.g.cshtml.cs
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmCategorias\Edit.g.cshtml.cs
 C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\AdmCategorias\Index.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Account\Logout.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\VINNY\source\repos\receitas2019\receitas2019\obj\Debug\netcoreapp2.2\Razor\Views\Account\LoggedIn.g.cshtml.cs
